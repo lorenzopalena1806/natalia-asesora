@@ -6,10 +6,10 @@
    1) CONFIGURACIÓN: completá el número de WhatsApp
    [NÚMERO EN FORMATO 549 + CÓDIGO DE ÁREA + NÚMERO, SIN 0 NI 15]
    Ejemplo de formato (no real): 5493411234567
-   Tip: reemplazá también "549XXXXXXXXXX" en index.html (buscar y
+   Tip: reemplazá también "5491155851032" en index.html (buscar y
    reemplazar) para que los enlaces funcionen aunque falle el JS.
 ----------------------------------------------------------- */
-const WHATSAPP_NUMBER = "549XXXXXXXXXX";
+const WHATSAPP_NUMBER = "5491155851032";
 
 /* -----------------------------------------------------------
    2) MENSAJES PRELLENADOS por ubicación del botón (data-wa)
@@ -169,3 +169,4 @@ document.addEventListener("DOMContentLoaded", () => {
     reveal.forEach((el) => { el.classList.add("reveal"); io.observe(el); });
   }
 });
+
