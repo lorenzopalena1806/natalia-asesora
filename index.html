@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+  <title>Natalia Asesora | Asesora de prepagas y obras sociales</title>
+  <meta name="description" content="Asesoramiento gratuito en prepagas y obras sociales en toda Argentina. Te ayudo a elegir tu plan y gestiono el alta y la derivación de aportes." />
+  <meta name="theme-color" content="#0F4C5C" />
+  <meta name="robots" content="index, follow" />
+  <!-- [COMPLETAR DOMINIO FINAL] Reemplazá la URL cuando tengas el dominio definitivo de Vercel o propio -->
+  <link rel="canonical" href="https://natalia-asesora.vercel.app/" />
+
+  <!-- Open Graph / redes -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="Natalia Asesora" />
+  <meta property="og:title" content="Natalia Asesora | Asesora de prepagas y obras sociales" />
+  <meta property="og:description" content="Te ayudo a elegir tu cobertura médica y me ocupo de los trámites. Asesoramiento gratuito por WhatsApp en toda Argentina." />
+  <meta property="og:url" content="https://natalia-asesora.vercel.app/" />
+  <meta property="og:image" content="https://natalia-asesora.vercel.app/assets/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+
+  <!-- Tipografías: Plus Jakarta Sans (titulares) + Inter (cuerpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" />
+
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- Datos estructurados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Natalia Asesora",
+    "description": "Asesoramiento gratuito y personalizado en prepagas y obras sociales, con gestión de alta y derivación de aportes. Atención remota por WhatsApp.",
+    "areaServed": { "@type": "Country", "name": "Argentina" },
+    "url": "https://natalia-asesora.vercel.app/",
+    "availableLanguage": "es"
+  }
+  </script>
+
+  <!--
+    ================= MEDICIÓN (opcional) =================
+    Para activar Google Analytics 4: descomentá el bloque y reemplazá [GA4_MEASUREMENT_ID].
+    <script async src="https://www.googletagmanager.com/gtag/js?id=[GA4_MEASUREMENT_ID]"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '[GA4_MEASUREMENT_ID]');
+    </script>
+
+    Para activar Meta Pixel: descomentá el bloque y reemplazá [META_PIXEL_ID].
+    <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '[META_PIXEL_ID]');
+      fbq('track', 'PageView');
+    </script>
+    El evento "Contact" de Meta y "whatsapp_click" de GA4 ya se disparan solos desde js/main.js.
+  -->
+</head>
+
+<body>
+  <!-- ============ SPRITE DE ÍCONOS (línea, estilo Lucide) ============ -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+    <symbol id="i-laptop" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============ 1. HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Natalia Asesora, volver al inicio">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span class="brand-text">
+          <strong>Natalia Asesora</strong>
+          <small>Coberturas médicas</small>
+        </span>
+      </a>
+      <a class="btn btn-wa btn-sm" href="https://wa.me/549XXXXXXXXXX" data-wa="header">
+        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+        <span class="hide-xs">Escribime por </span>WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ 2. HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg> Asesoramiento gratuito · Toda Argentina</p>
+          <h1 id="hero-title">Elegí tu cobertura médica con tranquilidad. <span class="hl">Yo me ocupo de los trámites.</span></h1>
+          <p class="lead">Te asesoro gratis y de forma personalizada por WhatsApp para encontrar la prepaga u obra social que mejor se adapta a tu presupuesto y a lo que necesitás. Comparamos opciones y gestiono el alta y la derivación de aportes, sin costo extra para vos.</p>
+
+          <div class="cta-block">
+            <a class="btn btn-wa btn-lg" href="https://wa.me/549XXXXXXXXXX" data-wa="hero" id="hero-cta">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Quiero mi asesoramiento gratis
+            </a>
+            <p class="microcopy"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Sin costo · Sin compromiso · Te respondo personalmente</p>
+          </div>
+
+          <ul class="hero-trust" role="list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> 8 prepagas y obras sociales para comparar</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Atención 100% por WhatsApp, en todo el país</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Te acompaño en el alta y la derivación de aportes</li>
+          </ul>
+        </div>
+
+        <!-- Visual: simulación de cómo empieza la conversación (no es un testimonio) -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="chat-card">
+            <div class="chat-head">
+              <span class="chat-avatar">N</span>
+              <span class="chat-id"><strong>Natalia Asesora</strong><small>en línea</small></span>
+            </div>
+            <div class="chat-body">
+              <p class="bubble out">Hola Natalia, quiero que me ayudes a elegir una cobertura médica.</p>
+              <p class="bubble in">¡Hola! Con gusto te ayudo 😊 Contame: ¿para quién sería la cobertura, qué edades tienen y en qué zona viven?</p>
+              <p class="bubble out">Somos 3, vivimos en Rosario y tengo recibo de sueldo.</p>
+              <p class="bubble in">Perfecto. Con tus aportes podemos ver varias opciones. Te armo una comparación simple 👇</p>
+            </div>
+            <p class="chat-caption">Así empieza tu consulta</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. BARRA DE CONFIANZA ============ -->
+    <!-- Reemplazá cada <span> por el logo oficial en SVG (assets/logos/) cuando tengas autorización de uso. -->
+    <section class="trust-bar" aria-label="Entidades con las que trabajo">
+      <div class="container">
+        <p class="trust-title">Te asesoro sobre planes de</p>
+        <ul class="logo-row" role="list">
+          <li class="logo-chip">Premedic</li>
+          <li class="logo-chip">Osdepym</li>
+          <li class="logo-chip">Doctored</li>
+          <li class="logo-chip">Avalian</li>
+          <li class="logo-chip">Prevención Salud</li>
+          <li class="logo-chip">Sancor Salud</li>
+          <li class="logo-chip">Galeno</li>
+          <li class="logo-chip">Omint</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 4. ¿PARA QUIÉN ES? (sube para autoselección temprana) ============ -->
+    <section class="section" id="para-quien" aria-labelledby="pq-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker">¿Para quién es?</p>
+          <h2 id="pq-title">¿Cuál es tu situación?</h2>
+          <p>Elegí la opción que más se parece a la tuya y escribime. El mensaje ya te llega armado, solo tenés que enviarlo.</p>
+        </header>
+
+        <div class="cards-4">
+          <article class="seg-card">
+            <span class="seg-icon"><svg class="icon" aria-hidden="true"><use href="#i-receipt"/></svg></span>
+            <h3>Tengo recibo de sueldo</h3>
+            <p>Usá los aportes que ya se descuentan de tu sueldo para acceder a un plan que te guste más. Si el plan cuesta más que tus aportes, pagás solo la diferencia.</p>
+            <a class="btn btn-wa btn-block" href="https://wa.me/549XXXXXXXXXX" data-wa="recibo">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Quiero derivar mis aportes
+            </a>
+          </article>
+
+          <article class="seg-card">
+            <span class="seg-icon"><svg class="icon" aria-hidden="true"><use href="#i-laptop"/></svg></span>
+            <h3>Soy monotributista</h3>
+            <p>Tu cuota de monotributo ya incluye un aporte para obra social. Te explico cómo aprovecharlo y qué planes podés sumar según tu categoría.</p>
+            <a class="btn btn-wa btn-block" href="https://wa.me/549XXXXXXXXXX" data-wa="monotributo">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Ver opciones para monotributo
+            </a>
+          </article>
+
+          <article class="seg-card">
+            <span class="seg-icon"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span>
+            <h3>Particular o familia</h3>
+            <p>Si no tenés aportes o querés sumar a tu familia, comparamos planes según edades, zona y presupuesto, para que elijas con toda la información.</p>
+            <a class="btn btn-wa btn-block" href="https://wa.me/549XXXXXXXXXX" data-wa="familia">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Cotizar para mi familia
+            </a>
+          </article>
+
+          <article class="seg-card">
+            <span class="seg-icon"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg></span>
+            <h3>Empresas y pymes</h3>
+            <p>Ofrecé cobertura médica a tu equipo sin sumar trabajo administrativo. Te ayudo a armar la propuesta y acompaño las altas de cada persona.</p>
+            <a class="btn btn-wa btn-block" href="https://wa.me/549XXXXXXXXXX" data-wa="empresa">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Cotizar para mi empresa
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. PROBLEMA Y EMPATÍA ============ -->
+    <section class="section section-tint" id="problema" aria-labelledby="prob-title">
+      <div class="container two-col">
+        <div>
+          <p class="kicker">Te entiendo</p>
+          <h2 id="prob-title">Elegir cobertura médica no debería ser un dolor de cabeza</h2>
+          <p>Sé lo confuso que es. Hay muchísimos planes, cada uno con nombres, categorías y condiciones distintas. Y cuando preguntás, muchas veces te responden con apuro o con ganas de venderte algo.</p>
+          <ul class="pain-list" role="list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg> No sabés si te conviene una prepaga o una obra social (ni cuál es la diferencia).</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg> Te da miedo pagar de más o elegir un plan que después no te sirve.</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg> Te preocupa la letra chica: carencias, preexistencias, copagos y aumentos.</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg> No entendés cómo funciona la derivación de aportes ni qué papeles hacen falta.</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg> No sabés si tus médicos y clínicas están en la cartilla de tu zona.</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg> No tenés tiempo de llamar a cada prepaga para comparar.</li>
+          </ul>
+          <p class="strong-line">Si alguno de estos puntos te suena, para eso estoy.</p>
+          <a class="link-cta" href="https://wa.me/549XXXXXXXXXX" data-wa="problema">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Contame tu caso por WhatsApp
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+
+        <aside class="glossary" aria-label="Glosario en simple">
+          <h3>Las palabras difíciles, en simple</h3>
+          <dl>
+            <dt>Obra social</dt>
+            <dd>Entidad que recibe los aportes de tu sueldo o de tu monotributo y, a cambio, te da cobertura médica.</dd>
+            <dt>Prepaga</dt>
+            <dd>Empresa de salud privada. Podés contratarla pagando una cuota mensual o, en muchos casos, ingresar usando tus aportes.</dd>
+            <dt>Carencia</dt>
+            <dd>Tiempo de espera que algunos planes ponen antes de cubrir ciertas prácticas.</dd>
+            <dt>Preexistencia</dt>
+            <dd>Una enfermedad o condición de salud que ya tenías antes de entrar al plan.</dd>
+            <dt>Copago</dt>
+            <dd>Un monto extra que pagás en algunas consultas o estudios, además de la cuota.</dd>
+            <dt>Cartilla</dt>
+            <dd>La lista de médicos, clínicas y sanatorios que atienden con cada plan.</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ 6. PROPUESTA DE VALOR + CÓMO FUNCIONA ============ -->
+    <section class="section" id="como-funciona" aria-labelledby="cf-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker">Cómo funciona</p>
+          <h2 id="cf-title">Así de simple es asesorarte conmigo</h2>
+          <p>Un asesoramiento personalizado y gratuito para que encuentres el plan médico ideal según tu presupuesto y lo que necesitás.</p>
+        </header>
+
+        <ol class="steps" role="list">
+          <li class="step">
+            <span class="step-num">1</span>
+            <svg class="icon step-icon" aria-hidden="true"><use href="#i-chat"/></svg>
+            <h3>Me escribís por WhatsApp</h3>
+            <p>Tocás el botón y me contás tu situación: edades, zona, quiénes se suman y si tenés recibo de sueldo o monotributo.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">2</span>
+            <svg class="icon step-icon" aria-hidden="true"><use href="#i-search"/></svg>
+            <h3>Analizo tus opciones</h3>
+            <p>Reviso los planes que pueden adaptarse a tu caso y te los explico en criollo: qué cubren, cuánto cuestan y qué condiciones tienen.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">3</span>
+            <svg class="icon step-icon" aria-hidden="true"><use href="#i-eye"/></svg>
+            <h3>Elegís con toda la información</h3>
+            <p>Sin presión. Te tomás el tiempo que necesites y me preguntás todo lo que quieras antes de decidir.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">4</span>
+            <svg class="icon step-icon" aria-hidden="true"><use href="#i-list"/></svg>
+            <h3>Me ocupo de los trámites</h3>
+            <p>Te guío en el alta y, si corresponde, en la derivación de aportes. Te acompaño hasta que quede todo listo.</p>
+          </li>
+        </ol>
+
+        <!-- [CONFIRMAR REDACCIÓN CON NATALIA] Texto sobre por qué el servicio es gratis -->
+        <div class="free-box">
+          <svg class="icon free-icon" aria-hidden="true"><use href="#i-wallet"/></svg>
+          <div>
+            <h3>¿Por qué mi asesoramiento es gratis?</h3>
+            <p>Porque las entidades con las que trabajo reconocen mi gestión cuando una persona se suma a través mío. Por eso no te cobro nada por asesorarte ni por hacer los trámites, y no pagás ningún costo extra por elegir conmigo.</p>
+          </div>
+        </div>
+
+        <div class="cta-block center">
+          <a class="btn btn-wa btn-lg" href="https://wa.me/549XXXXXXXXXX" data-wa="como-funciona">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Quiero empezar ahora
+          </a>
+          <!-- [HORARIO DE ATENCIÓN] Si querés, sumá el horario: "Te respondo de lunes a viernes de X a Y h" -->
+          <p class="microcopy">Te respondo personalmente, sin bots ni call centers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. COMPARATIVA ============ -->
+    <section class="section section-tint" id="comparativa" aria-labelledby="comp-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker">La diferencia</p>
+          <h2 id="comp-title">¿Por qué asesorarte conmigo y no ir directo a la prepaga?</h2>
+          <p>Contratar directo es una opción válida. La diferencia está en tener a alguien de tu lado que compare, te explique y te acompañe.</p>
+        </header>
+
+        <div class="table-wrap">
+          <table class="compare">
+            <caption class="sr-only">Comparación entre asesorarte con Natalia e ir directo a una prepaga</caption>
+            <thead>
+              <tr>
+                <th scope="col"><span class="sr-only">Aspecto</span></th>
+                <th scope="col" class="col-nat">Con Natalia</th>
+                <th scope="col">Directo a una prepaga</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Opciones que ves</th>
+                <td data-label="Con Natalia" class="col-nat"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Comparás planes de 8 entidades en una sola conversación</td>
+                <td data-label="Directo">Ves solo los planes de esa empresa</td>
+              </tr>
+              <tr>
+                <th scope="row">Costo del asesoramiento</th>
+                <td data-label="Con Natalia" class="col-nat"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Gratis, sin costo extra para vos</td>
+                <td data-label="Directo">Sin costo</td>
+              </tr>
+              <tr>
+                <th scope="row">Enfoque</th>
+                <td data-label="Con Natalia" class="col-nat"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Buscamos el plan que se adapta a tu caso, entre varias marcas</td>
+                <td data-label="Directo">Te ofrecen los planes de su propia empresa</td>
+              </tr>
+              <tr>
+                <th scope="row">Letra chica</th>
+                <td data-label="Con Natalia" class="col-nat"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Te explico carencias, copagos y condiciones antes de elegir</td>
+                <td data-label="Directo">Depende de quién te atienda; muchas veces tenés que leer y preguntar por tu cuenta</td>
+              </tr>
+              <tr>
+                <th scope="row">Derivación de aportes</th>
+                <td data-label="Con Natalia" class="col-nat"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Te guío paso a paso en el trámite</td>
+                <td data-label="Directo">Lo gestionás vos con la entidad</td>
+              </tr>
+              <tr>
+                <th scope="row">Tiempo</th>
+                <td data-label="Con Natalia" class="col-nat"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Una sola conversación por WhatsApp</td>
+                <td data-label="Directo">Consultar entidad por entidad</td>
+              </tr>
+              <tr>
+                <th scope="row">Atención</th>
+                <td data-label="Con Natalia" class="col-nat"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Una persona que conoce tu caso y te responde</td>
+                <td data-label="Directo">Canales generales de atención al cliente</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fine">Los precios y condiciones de cada plan los define cada entidad y están sujetos a edad, zona y requisitos de cada una.</p>
+
+        <div class="cta-block center">
+          <a class="btn btn-wa btn-lg" href="https://wa.me/549XXXXXXXXXX" data-wa="comparativa">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Quiero comparar planes gratis
+          </a>
+          <p class="microcopy">Sin compromiso: si no te convence ninguna opción, no pasa nada.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 8. TRÁMITES RESUELTOS ============ -->
+    <section class="section" id="tramites" aria-labelledby="tr-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker">Trámites</p>
+          <h2 id="tr-title">Los trámites, resueltos y explicados en simple</h2>
+          <p>Sé que la burocracia es lo que más frena. Por eso te acompaño en cada paso y te aviso qué necesitás antes de empezar.</p>
+        </header>
+
+        <div class="cards-2">
+          <article class="info-card">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-list"/></svg> Alta en el plan</h3>
+            <p><strong>¿Qué es?</strong> Es el trámite para empezar a tener tu cobertura en el plan que elegiste.</p>
+            <p><strong>¿Qué hago yo?</strong> Te digo qué documentación hace falta, te ayudo a completarla y sigo el proceso con la entidad.</p>
+            <p><strong>¿Qué se suele pedir?</strong> En general: DNI, número de CUIL y, según tu caso, recibo de sueldo o constancia de monotributo y una declaración de salud.</p>
+          </article>
+          <article class="info-card">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg> Derivación de aportes</h3>
+            <p><strong>¿Qué es?</strong> Si trabajás en relación de dependencia, todos los meses se descuenta de tu sueldo un aporte para la obra social. Derivar aportes es elegir a dónde va ese dinero, para usarlo en el plan que preferís.</p>
+            <p><strong>¿Y si el plan cuesta más?</strong> Pagás solo la diferencia entre tus aportes y el valor del plan.</p>
+            <p><strong>¿Qué hago yo?</strong> Te explico las opciones disponibles para tu caso y te guío en el trámite paso a paso.</p>
+          </article>
+        </div>
+        <p class="fine">Los plazos y requisitos dependen de cada entidad y de la normativa vigente. Antes de empezar te aviso los tiempos estimados para tu caso.</p>
+
+        <div class="cta-block center">
+          <a class="btn btn-wa btn-lg" href="https://wa.me/549XXXXXXXXXX" data-wa="tramites">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Quiero que me ayudes con el trámite
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 9. GRILLA DE ENTIDADES ============ -->
+    <section class="section section-tint" id="entidades" aria-labelledby="ent-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker">Opciones</p>
+          <h2 id="ent-title">Prepagas y obras sociales con las que trabajo</h2>
+          <p>Comparamos entre estas opciones según tu edad, tu zona, tu presupuesto y lo que necesitás.</p>
+        </header>
+        <!-- [CONFIRMAR RELACIÓN CON LAS ENTIDADES] No usar "oficial", "representante" ni "exclusiva" sin confirmación -->
+        <ul class="entity-grid" role="list">
+          <li>Premedic</li>
+          <li>Osdepym</li>
+          <li>Doctored</li>
+          <li>Avalian</li>
+          <li>Prevención Salud</li>
+          <li>Sancor Salud</li>
+          <li>Galeno</li>
+          <li>Omint</li>
+        </ul>
+        <p class="fine center">Las marcas pertenecen a sus respectivos titulares. La disponibilidad de cada plan varía según la zona y las condiciones de cada entidad.</p>
+        <div class="cta-block center">
+          <a class="btn btn-outline" href="https://wa.me/549XXXXXXXXXX" data-wa="entidades">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> ¿No sabés cuál te conviene? Te ayudo a comparar
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10. QUIÉN ES NATALIA ============ -->
+    <section class="section" id="natalia" aria-labelledby="nat-title">
+      <div class="container about">
+        <div class="about-photo">
+          <!--
+            [FOTO PROFESIONAL DE NATALIA] Reemplazá este bloque por:
+            <img src="/assets/img/natalia.webp" alt="Natalia, asesora en coberturas médicas, sonriendo" width="480" height="600" loading="lazy" decoding="async" />
+            Recomendado: luz natural, expresión cálida, fondo neutro, formato 4:5, menos de 120 KB en WebP.
+          -->
+          <div class="photo-placeholder" role="img" aria-label="Espacio para la foto de Natalia">
+            <span>N</span>
+          </div>
+        </div>
+        <div class="about-copy">
+          <p class="kicker">Quién te asesora</p>
+          <h2 id="nat-title">Hola, soy Natalia</h2>
+          <p>Soy asesora en coberturas médicas y mi trabajo es simple: ayudarte a entender tus opciones para que elijas con tranquilidad. Escucho tu situación, te explico cada plan sin tecnicismos y te acompaño en los trámites para que no tengas que lidiar con eso por tu cuenta.</p>
+          <!-- [AÑOS DE EXPERIENCIA] [FORMACIÓN] [HISTORIA PERSONAL] Sumá acá un párrafo corto. Ejemplo de estructura:
+               "Hace [AÑOS DE EXPERIENCIA] años que asesoro a personas, familias y empresas. Me formé en [FORMACIÓN] y empecé en esto porque [HISTORIA PERSONAL]." -->
+          <p>Creo que elegir una cobertura médica es una decisión importante, y que merecés que alguien te la explique con paciencia y honestidad.</p>
+          <ul class="check-list" role="list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Atención personalizada: hablás conmigo, no con un bot</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Asesoro a particulares, familias, monotributistas y empresas</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Te asesoro desde cualquier lugar del país</li>
+          </ul>
+          <!-- [DATO DE REGISTRO O MATRÍCULA, SI CORRESPONDE] Podés mostrarlo acá también como sello de confianza -->
+          <a class="btn btn-wa" href="https://wa.me/549XXXXXXXXXX" data-wa="natalia">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Hablemos por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 11. TESTIMONIOS / COMPROMISOS ============ -->
+    <section class="section section-tint" id="testimonios" aria-labelledby="test-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker">Mi forma de trabajar</p>
+          <h2 id="test-title">Mis compromisos con vos</h2>
+          <p>Así trabajo con cada persona que me escribe.</p>
+        </header>
+
+        <ul class="promise-grid" role="list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg><strong>Te explico todo antes de que decidas</strong><span>Qué cubre cada plan, qué no y en qué condiciones.</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><strong>Sin presión para contratar</strong><span>La decisión es tuya y te tomás el tiempo que necesites.</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><strong>Claridad con la letra chica</strong><span>Carencias, copagos y requisitos, dichos en simple.</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><strong>Respondo personalmente</strong><span>Hablás siempre con la misma persona.</span></li>
+        </ul>
+
+        <!--
+          ============ TESTIMONIOS (ocultos hasta tener reales) ============
+          Cuando tengas testimonios reales y autorizados, borrá el atributo "hidden" del div de abajo
+          y reemplazá cada marcador. No publiques testimonios inventados ni editados sin permiso.
+        -->
+        <div class="testimonials" hidden>
+          <h3 class="center">Lo que dicen quienes ya se asesoraron</h3>
+          <div class="t-grid">
+            <figure class="t-card">
+              <blockquote>“[TESTIMONIO REAL 1]”</blockquote>
+              <figcaption><strong>[NOMBRE 1]</strong><span>[PERFIL: RECIBO DE SUELDO] · [CIUDAD, PROVINCIA]</span><small>Eligió: [PLAN ELEGIDO]</small></figcaption>
+            </figure>
+            <figure class="t-card">
+              <blockquote>“[TESTIMONIO REAL 2]”</blockquote>
+              <figcaption><strong>[NOMBRE 2]</strong><span>[PERFIL: MONOTRIBUTISTA] · [CIUDAD, PROVINCIA]</span><small>Eligió: [PLAN ELEGIDO]</small></figcaption>
+            </figure>
+            <figure class="t-card">
+              <blockquote>“[TESTIMONIO REAL 3]”</blockquote>
+              <figcaption><strong>[NOMBRE 3]</strong><span>[PERFIL: GRUPO FAMILIAR] · [CIUDAD, PROVINCIA]</span><small>Eligió: [PLAN ELEGIDO]</small></figcaption>
+            </figure>
+            <figure class="t-card">
+              <blockquote>“[TESTIMONIO REAL 4]”</blockquote>
+              <figcaption><strong>[NOMBRE 4]</strong><span>[PERFIL: EMPRESA / PYME] · [CIUDAD, PROVINCIA]</span><small>Eligió: [PLAN ELEGIDO]</small></figcaption>
+            </figure>
+            <figure class="t-card">
+              <blockquote>“[TESTIMONIO REAL 5]”</blockquote>
+              <figcaption><strong>[NOMBRE 5]</strong><span>[PERFIL: PARTICULAR] · [CIUDAD, PROVINCIA]</span><small>Eligió: [PLAN ELEGIDO]</small></figcaption>
+            </figure>
+            <figure class="t-card">
+              <blockquote>“[TESTIMONIO REAL 6]”</blockquote>
+              <figcaption><strong>[NOMBRE 6]</strong><span>[PERFIL: CAMBIO DE PREPAGA] · [CIUDAD, PROVINCIA]</span><small>Eligió: [PLAN ELEGIDO]</small></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="cta-block center">
+          <a class="btn btn-wa btn-lg" href="https://wa.me/549XXXXXXXXXX" data-wa="testimonios">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Quiero asesorarme con Natalia
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 12. ALCANCE NACIONAL ============ -->
+    <section class="section" id="alcance" aria-labelledby="alc-title">
+      <div class="container narrow center">
+        <p class="kicker">Alcance nacional</p>
+        <h2 id="alc-title">Estés donde estés en Argentina, te asesoro por WhatsApp</h2>
+        <p>No importa si vivís en una gran ciudad o en un pueblo chico: el asesoramiento y los trámites se hacen a distancia. Antes de recomendarte un plan, reviso qué opciones tienen <strong>cartilla</strong> (médicos, clínicas y sanatorios) en tu zona.</p>
+        <ul class="province-cloud" role="list" aria-label="Provincias">
+          <li>CABA</li><li>Buenos Aires</li><li>Catamarca</li><li>Chaco</li><li>Chubut</li><li>Córdoba</li>
+          <li>Corrientes</li><li>Entre Ríos</li><li>Formosa</li><li>Jujuy</li><li>La Pampa</li><li>La Rioja</li>
+          <li>Mendoza</li><li>Misiones</li><li>Neuquén</li><li>Río Negro</li><li>Salta</li><li>San Juan</li>
+          <li>San Luis</li><li>Santa Cruz</li><li>Santa Fe</li><li>Santiago del Estero</li><li>Tierra del Fuego</li><li>Tucumán</li>
+        </ul>
+        <p class="fine">La disponibilidad de planes y prestadores varía según cada zona y entidad.</p>
+        <div class="cta-block center">
+          <a class="btn btn-wa btn-lg" href="https://wa.me/549XXXXXXXXXX" data-wa="zona">
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Consultar opciones en mi zona
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 13. PREGUNTAS FRECUENTES ============ -->
+    <section class="section section-tint" id="faq" aria-labelledby="faq-title">
+      <div class="container narrow">
+        <header class="section-head">
+          <p class="kicker">Preguntas frecuentes</p>
+          <h2 id="faq-title">Lo que más me preguntan</h2>
+        </header>
+
+        <div class="faq-list">
+          <details>
+            <summary>¿Realmente es gratis? ¿Dónde está la trampa?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a">
+              <!-- [CONFIRMAR REDACCIÓN CON NATALIA] -->
+              <p>Sí, es gratis para vos. Las entidades con las que trabajo reconocen mi gestión cuando una persona se suma a través mío, así que no te cobro el asesoramiento ni los trámites, y no pagás ningún costo extra por elegir conmigo. Y si al final no elegís ningún plan, tampoco pasa nada.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Cuál es la diferencia entre prepaga y obra social?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a">
+              <p>La obra social recibe los aportes de tu sueldo o de tu monotributo y te da cobertura. La prepaga es una empresa de salud privada: podés contratarla pagando una cuota o, en muchos casos, ingresar usando tus aportes a través de una obra social que tenga convenio con ella. Te explico cuál te conviene según tu situación.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Qué es derivar aportes?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a">
+              <p>Si trabajás en relación de dependencia, todos los meses se descuenta de tu sueldo un aporte para la obra social. Derivar aportes es elegir a dónde va ese dinero para usarlo en el plan que preferís. Si el plan cuesta más que tus aportes, pagás solo la diferencia. Yo te guío en todo el trámite.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Puedo derivar aportes si soy monotributista?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a">
+              <p>En muchos casos sí. Tu cuota de monotributo incluye un componente para obra social que, según tu categoría y la entidad, se puede aplicar a un plan. Si el plan cuesta más, pagás la diferencia. Las condiciones cambian según cada entidad, así que lo mejor es que me cuentes tu caso y lo vemos juntos.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Qué pasa con las preexistencias y las carencias?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a">
+              <p><strong>Preexistencia</strong> es una condición de salud que ya tenías antes de entrar al plan. La ley de medicina prepaga establece que no pueden rechazarte por eso, aunque en algunos casos pueden aplicar una cuota diferencial autorizada. Por eso es importante declararlas siempre.</p>
+              <p><strong>Carencia</strong> es un tiempo de espera que algunos planes aplican antes de cubrir ciertas prácticas. Varía según el plan. Antes de que elijas, te explico con claridad qué aplica en tu caso.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Cuánto tarda el trámite?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a">
+              <p>Depende de la entidad, del tipo de alta y de si hay derivación de aportes. No te voy a prometer plazos que no dependen de mí, pero sí te aviso los tiempos estimados de tu caso antes de empezar y te mantengo al tanto en cada paso.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Puedo cambiar de plan más adelante?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a">
+              <p>En general sí, aunque las condiciones y los plazos dependen de cada entidad y de la normativa vigente. Si en algún momento querés revisar tu plan, escribime y vemos qué opciones tenés.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Qué pasa si ya tengo una prepaga?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a">
+              <p>Podemos revisar tu plan actual y compararlo con otras opciones. Si te conviene quedarte donde estás, te lo voy a decir. Y si te conviene cambiar, te explico qué tener en cuenta (carencias, cartilla, condiciones) antes de dar el paso.</p>
+              <a class="link-cta" href="https://wa.me/549XXXXXXXXXX" data-wa="faq-prepaga"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Quiero revisar mi plan actual</a>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Trabajás en todo el país?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a">
+              <p>Sí. Todo el asesoramiento es por WhatsApp, así que te puedo asesorar estés donde estés en Argentina. Eso sí: la cartilla y la disponibilidad de cada plan cambian según la zona, y eso es lo primero que reviso.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Qué necesito para empezar?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a">
+              <p>Solo escribirme. Para darte opciones me sirve saber: edades de quienes se suman, en qué zona viven, si tenés recibo de sueldo o monotributo y qué presupuesto tenés en mente. La documentación recién la vemos si decidís avanzar.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Puedo sumar a mi familia?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a">
+              <p>Sí, la mayoría de los planes permiten sumar a tu grupo familiar. El valor y las condiciones dependen de las edades, la zona y el plan. Te armo opciones pensadas para todos.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Trabajás con empresas?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a">
+              <p>Sí. Si tenés una pyme o empleados a cargo, te ayudo a armar una propuesta de cobertura para tu equipo y acompaño las altas, para que no tengas que sumar trabajo administrativo.</p>
+              <a class="link-cta" href="https://wa.me/549XXXXXXXXXX" data-wa="empresa"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Cotizar para mi empresa</a>
+            </div>
+          </details>
+        </div>
+
+        <div class="cta-block center">
+          <p class="strong-line">¿Tenés otra duda?</p>
+          <a class="btn btn-wa" href="https://wa.me/549XXXXXXXXXX" data-wa="faq">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Preguntame por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 14. CTA FINAL ============ -->
+    <section class="final-cta" id="final-cta" aria-labelledby="final-title">
+      <div class="container narrow center">
+        <h2 id="final-title">Tu próxima cobertura médica empieza con un mensaje</h2>
+        <p>Contame tu situación y te respondo personalmente con opciones pensadas para vos.</p>
+        <a class="btn btn-wa btn-lg btn-light-ring" href="https://wa.me/549XXXXXXXXXX" data-wa="cierre">
+          <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Quiero mi asesoramiento gratis por WhatsApp
+        </a>
+        <ul class="final-points" role="list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Sin costo para vos</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Sin compromiso</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Te respondo yo</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 15. FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a class="brand brand-light" href="#top" aria-label="Natalia Asesora, volver al inicio">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span class="brand-text"><strong>Natalia Asesora</strong><small>Coberturas médicas</small></span>
+        </a>
+        <div class="footer-contact">
+          <a href="https://wa.me/549XXXXXXXXXX" data-wa="footer"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp</a>
+          <!-- [INSTAGRAM – OPCIONAL] <a href="https://instagram.com/[USUARIO]" rel="noopener" target="_blank">Instagram</a> -->
+        </div>
+      </div>
+
+      <div class="legal">
+        <p><strong>Aviso legal.</strong> Natalia Asesora brinda asesoramiento sobre planes de salud. Las marcas, nombres y logos de las prepagas y obras sociales mencionadas pertenecen a sus respectivos titulares y se usan solo con fines informativos; su mención no implica vínculo oficial, representación ni exclusividad, salvo indicación expresa. La información de este sitio es orientativa y no constituye una oferta: coberturas, precios, carencias y condiciones están sujetos a las condiciones de cada plan, edad, zona y requisitos de cada entidad, y pueden cambiar sin previo aviso.</p>
+        <!-- [DATO DE REGISTRO O MATRÍCULA, SI CORRESPONDE] <p>Matrícula / Registro: [DATO]</p> -->
+        <p><strong>Privacidad.</strong> Al escribirme por WhatsApp, los datos que compartas (por ejemplo nombre, edad, zona o información de salud) se usan únicamente para asesorarte y gestionar tu trámite, y no se venden ni se ceden a terceros ajenos a esa gestión, conforme a la Ley 25.326 de Protección de Datos Personales. Podés pedir que se eliminen en cualquier momento por el mismo medio. WhatsApp es un servicio de Meta y se rige por sus propias políticas. Este sitio puede usar herramientas de medición para conocer, de forma agregada, cómo se usa la página.</p>
+        <p class="copy">© <span id="year">2026</span> Natalia Asesora. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ CTAs FIJOS ============ -->
+  <!-- Botón flotante (desktop / tablet) -->
+  <div class="wa-float" id="wa-float" aria-hidden="true">
+    <span class="wa-tooltip" id="wa-tooltip">¿Te ayudo a elegir? Escribime 👋</span>
+    <a class="wa-float-btn" href="https://wa.me/549XXXXXXXXXX" data-wa="flotante" aria-label="Escribir a Natalia por WhatsApp" tabindex="-1">
+      <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+    </a>
+  </div>
+
+  <!-- Barra fija inferior (mobile) -->
+  <div class="wa-bar" id="wa-bar" aria-hidden="true">
+    <a class="btn btn-wa btn-block" href="https://wa.me/549XXXXXXXXXX" data-wa="barra-mobile" tabindex="-1">
+      <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Asesoramiento gratis por WhatsApp
+    </a>
+    <p>Sin costo · Sin compromiso</p>
+  </div>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
