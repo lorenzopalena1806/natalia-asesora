@@ -1,9 +1,9 @@
 /* =========================================================
    Natalia Asesora – Landing de alta conversión (mobile-first)
    Paleta (contraste WCAG AA verificado):
-   --teal      #0F4C5C  primario (titulares, fondos oscuros) – blanco sobre teal 9.5:1
-   --sage      #DCEFE8  secundario (fondos de tarjetas / tintes)
-   --cream     #FBF8F3  fondo general cálido
+   --teal      #1E6542  primario (titulares, fondos oscuros) – blanco sobre teal 9.5:1
+   --sage      #C3E0CC  secundario (fondos de tarjetas / tintes)
+   --cream     #F4F9F6  fondo general cálido
    --ink       #1F2A30  texto principal (≈14:1 sobre crema)
    --muted     #4A5A62  texto secundario (≈6.7:1 sobre crema)
    --coral     #E07A5F  acento decorativo (nunca como color de texto)
@@ -12,11 +12,11 @@
    ========================================================= */
 
 :root {
-  --teal: #0F4C5C;
-  --teal-700: #0B3B47;
-  --sage: #DCEFE8;
-  --sage-50: #EEF7F3;
-  --cream: #FBF8F3;
+  --teal: #1E6542;
+  --teal-700: #124128;
+  --sage: #C3E0CC;
+  --sage-50: #E6F4EA;
+  --cream: #F4F9F6;
   --white: #FFFFFF;
   --ink: #1F2A30;
   --muted: #4A5A62;
@@ -33,8 +33,8 @@
   --radius-sm: 10px;
   --radius: 16px;
   --radius-lg: 24px;
-  --shadow-sm: 0 1px 2px rgba(15, 76, 92, .06), 0 2px 8px rgba(15, 76, 92, .06);
-  --shadow: 0 4px 12px rgba(15, 76, 92, .08), 0 12px 32px rgba(15, 76, 92, .08);
+  --shadow-sm: 0 1px 2px rgba(30, 101, 66, .06), 0 2px 8px rgba(30, 101, 66, .06);
+  --shadow: 0 4px 12px rgba(30, 101, 66, .08), 0 12px 32px rgba(30, 101, 66, .08);
   --shadow-wa: 0 6px 18px rgba(11, 122, 67, .32);
 
   --container: 1140px;
@@ -348,7 +348,7 @@ strong { font-weight: 600; }
 .faq-a .link-cta { margin-top: 12px; }
 
 /* ---------- CTA final ---------- */
-.final-cta { padding: var(--section-y) 0; color: #fff; background: radial-gradient(120% 120% at 100% 0%, #176577 0%, var(--teal) 45%, var(--teal-700) 100%); }
+.final-cta { padding: var(--section-y) 0; color: #fff; background: radial-gradient(120% 120% at 100% 0%, #258C5A 0%, var(--teal) 45%, var(--teal-700) 100%); }
 .final-cta h2 { color: #fff; }
 .final-cta p { color: #D7E9E9; font-size: 1.125rem; }
 .final-cta .btn { margin-top: 12px; }
@@ -357,7 +357,7 @@ strong { font-weight: 600; }
 .final-points .icon { color: #8FE3B5; stroke-width: 2.5; }
 
 /* ---------- Footer ---------- */
-.site-footer { padding: 40px 0 120px; background: #0A2F38; color: #C9D6D9; font-size: .8125rem; }
+.site-footer { padding: 40px 0 120px; background: #0F3823; color: #C3E0CC; font-size: .8125rem; }
 @media (min-width: 900px) { .site-footer { padding-bottom: 40px; } }
 .footer-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 24px; border-bottom: 1px solid rgba(255, 255, 255, .12); }
 .brand-light { color: #fff; }
@@ -400,7 +400,7 @@ strong { font-weight: 600; }
 .wa-bar {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
   padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom));
-  background: rgba(255, 255, 255, .97); border-top: 1px solid var(--line); box-shadow: 0 -6px 20px rgba(15, 76, 92, .1);
+  background: rgba(255, 255, 255, .97); border-top: 1px solid var(--line); box-shadow: 0 -6px 20px rgba(30, 101, 66, .1);
   transform: translateY(110%); transition: transform .3s ease;
 }
 .wa-bar.visible { transform: none; }
@@ -417,3 +417,4 @@ strong { font-weight: 600; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
