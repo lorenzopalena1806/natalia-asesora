@@ -15,8 +15,8 @@
   --teal: #1E6542;
   --teal-700: #124128;
   --sage: #C3E0CC;
-  --sage-50: #E6F4EA;
-  --cream: #F4F9F6;
+  --sage-50: #D1E6D8;
+  --cream: #E2EFE5;
   --white: #FFFFFF;
   --ink: #1F2A30;
   --muted: #4A5A62;
@@ -417,4 +417,5 @@ strong { font-weight: 600; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
 
